@@ -1,4 +1,4 @@
-# Social Insights Dashboard
+# Echoes
 
 A web app to scrape and analyze social media & news sentiment, keywords, hashtags, and trends.
 
