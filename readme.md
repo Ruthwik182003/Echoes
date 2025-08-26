@@ -21,7 +21,7 @@ A web app to scrape and analyze social media & news sentiment, keywords, hashtag
 
 ### Backend
 ```bash
-terminal 1:
+Terminal 1:
 cd backend
 python -m venv .venv
 source .venv/bin/activate   # (Linux/Mac)
@@ -29,9 +29,11 @@ source .venv/bin/activate   # (Linux/Mac)
 
 pip install -r requirements.txt
 uvicorn main:app --reload
+```
 
-
-terminal 2:
+###  Frontend
+```bash
+Terminal 2:
 cd frontend
-python -m http.server 5173   
-
+python -m http.server 5173 
+```
