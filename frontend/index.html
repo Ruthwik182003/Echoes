@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social OSINT Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.js"></script>
+</head>
+<body class="light">
+  <header>
+    <h1>Social OSINT Dashboard</h1>
+    <button id="darkToggle">🌙 Dark Mode</button>
+  </header>
+
+    <section class="card">
+      <h2>Search</h2>
+      <form id="searchForm">
+        <div class="grid">
+          <label>Keyword
+            <input id="keyword" type="text" required />
+          </label>
+          <label>Platform
+            <select id="platform">
+              <option value="reddit">Reddit</option>
+              <option value="news">News</option>
+              <option value="twitter">Twitter/X</option>
+            </select>
+          </label>
+          <label>Timeframe (days)
+            <input id="days" type="number" min="1" max="30" value="7" />
+          </label>
+        </div>
+
+        <button type="submit">Run</button>
+      </form>
+      <div id="status" class="status"></div>
+    </section>
+
+    <main class="dashboard">
+      <div class="card">
+        <h3>Sentiment</h3>
+        <canvas id="sentimentChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Word Cloud</h3>
+        <canvas id="wordCloud"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Top Keywords</h3>
+        <ul id="keywordList" class="list"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Top Hashtags</h3>
+        <ul id="hashtagList" class="list"></ul>
+      </div>
+
+      <div class="card wide">
+        <h3>Posts</h3>
+        <div id="samples" class="samples"></div>
+      </div>
+
+    </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
